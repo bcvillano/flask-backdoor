@@ -1,4 +1,4 @@
-# flaskshell
+# flask-backdoor
 A Flask-based backdoor providing remote command execution. For use on authorized systems only, designed for red v blue cybersecurity competitions. 
  <br> <br> backdoor.py - The backdoor server running on the target host, awaiting commands to be sent
  <br>commander.py - Interactive terminal client for sending commands to execute 
